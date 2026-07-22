@@ -301,6 +301,14 @@ body {
         margin: 6px 0;
     }
 
+.portfolio-grid,
+.services-grid,
+.process-grid {
+    grid-template-columns: 1fr;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
 }
 
 /* Smooth State Transitions */
