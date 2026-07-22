@@ -1,32 +1,66 @@
+/* 
+    SILENT WEB STUDIO - ULTRA-PREMIUM REFACTOR
+    Architecture: Senior UI/UX Engineer
+    Standard: Awwwards / Linear / Stripe Visual Language
+*/
+
 :root {
-    /* Design Tokens */
-    --bg-black: #030712;
+    /* Refined Color Science */
+    --bg-black: #020617;
+    --bg-card: rgba(15, 23, 42, 0.3);
     --blue-primary: #3B82F6;
     --purple-primary: #8B5CF6;
+    
+    /* Perceptual Glows (Subtle & Deep) */
+    --blue-glow: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    --purple-glow: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+    
+    /* Typography hierarchy tokens */
     --text-white: #F8FAFC;
     --text-muted: #94A3B8;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --container-width: 1280px;
-    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --text-dim: #64748B;
+    
+    /* Lighting & Surface Tokens */
+    --glass-bg: rgba(255, 255, 255, 0.015);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-border-bright: rgba(255, 255, 255, 0.12);
+    --border-highlight: rgba(255, 255, 255, 0.05);
+    
+    /* Easing Functions (The "Apple" Feel) */
+    --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Layered Shadows (Linear Style) */
+    --shadow-sm: 0 1px 1px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 30px -10px rgba(0,0,0,0.5), 0 40px 80px -20px rgba(0,0,0,0.6);
+    
+    --container-width: 1200px;
+    --space-xl: 10rem;
 }
 
+/* 1. Global Refinements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    selection-background: var(--blue-primary);
+    selection-color: white;
 }
 
-html {
-    scroll-behavior: smooth;
+::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: white;
 }
 
 body {
     background-color: var(--bg-black);
     color: var(--text-white);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    letter-spacing: -0.011em; /* Modern typography tracking */
 }
 
 .container {
@@ -35,270 +69,206 @@ body {
     padding: 0 2rem;
 }
 
-/* Background Glows */
+/* 2. Atmospheric Lighting */
 .glow-orchestrator {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: -1;
     pointer-events: none;
-    overflow: hidden;
+    background: radial-gradient(100% 100% at 50% 0%, rgba(15, 23, 42, 0.5) 0%, var(--bg-black) 100%);
 }
 
 .glow-1 {
-    position: absolute;
-    top: -10%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-    filter: blur(80px);
+    top: -15%;
+    right: -5%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--blue-glow);
+    filter: blur(100px);
 }
 
 .glow-2 {
-    position: absolute;
-    bottom: 20%;
-    left: -5%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    bottom: 5%;
+    left: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: var(--purple-glow);
     filter: blur(80px);
 }
 
-/* Navigation */
+/* 3. High-End Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
-    transition: var(--transition-smooth);
+    padding: 2.5rem 0;
+    transition: all 0.6s var(--ease-premium);
 }
 
 .navbar.scrolled {
-    padding: 1rem 0;
-    background: rgba(3, 7, 18, 0.7);
-    backdrop-filter: blur(16px);
+    padding: 1.2rem 0;
+    background: rgba(2, 6, 23, 0.4);
+    backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--glass-border);
 }
 
-.nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo {
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    font-size: 1.15rem;
+    transition: var(--ease-premium);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: -0.02em;
-}
+.logo:hover { opacity: 0.8; }
 
 .logo-icon {
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(135deg, var(--blue-primary), var(--purple-primary));
-    border-radius: 3px;
-    transform: rotate(45deg);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), inset 0 0 5px rgba(255,255,255,0.2);
 }
 
 .nav-menu {
-    display: flex;
-    gap: 2.5rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm), inset 0 1px 1px rgba(255,255,255,0.05);
 }
 
 .nav-link {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s var(--ease-in-out);
+    position: relative;
 }
 
 .nav-link:hover {
-    color: #fff;
+    color: white;
+    transform: translateY(-1px);
 }
 
-/* Buttons */
+/* 4. Premium Buttons */
 .btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: var(--transition-smooth);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    border: 1px solid transparent;
+    letter-spacing: -0.01em;
 }
 
 .btn-primary {
-    background: #fff;
+    background: linear-gradient(180deg, #fff 0%, #e2e8f0 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,0.4) inset;
     color: #000;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
 }
 
 .btn-glass {
-    background: var(--glass-bg);
-    color: #fff;
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border-bright);
+    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-glass:hover {
     background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn-outline {
-    color: #fff;
-    border: 1px solid var(--glass-border);
-    margin-left: 1rem;
-}
-
-/* Hero Section */
+/* 5. Hero Section Visual Language */
 .hero {
-    padding: 12rem 0 8rem;
-    position: relative;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 4rem;
-    align-items: center;
+    padding: var(--space-xl) 0 6rem;
 }
 
 .badge {
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--blue-primary);
-    padding: 0.4rem 1rem;
-    border-radius: 100px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
     border: 1px solid rgba(59, 130, 246, 0.2);
-    display: inline-block;
-    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 1.1;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.05em;
+    font-weight: 800;
 }
 
 .text-gradient {
-    background: linear-gradient(to right, var(--blue-primary), var(--purple-primary));
+    background: linear-gradient(to bottom right, #fff 30%, rgba(255,255,255,0.8) 60%, var(--blue-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
 }
 
 .hero-description {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
+    font-weight: 400;
     color: var(--text-muted);
-    max-width: 500px;
-    margin-bottom: 2.5rem;
 }
 
-/* Hero Visual (Glass Dashboard) */
+/* 6. Dashboard Mockup (The "Linear" Look) */
 .glass-dashboard {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    height: 400px;
-    width: 100%;
-    position: relative;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
+    background: linear-gradient(160deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.2) 100%);
+    box-shadow: var(--shadow-lg), inset 0 0 0 1px var(--glass-border-bright);
 }
 
-.dashboard-nav {
-    height: 40px;
-    border-bottom: 1px solid var(--glass-border);
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    gap: 1.5rem;
+/* Inner shadow and reflection line */
+.glass-dashboard::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
 }
-
-.dots { display: flex; gap: 6px; }
-.dots span { width: 8px; height: 8px; border-radius: 50%; }
-.d-red { background: #ff5f57; }
-.d-yellow { background: #febc2e; }
-.d-green { background: #28c840; }
 
 .address-bar {
-    background: rgba(255,255,255,0.05);
-    font-size: 0.7rem;
-    padding: 2px 20px;
-    border-radius: 4px;
-    color: var(--text-muted);
-}
-
-.dashboard-content { padding: 2rem; }
-.skeleton-hero { height: 120px; background: rgba(255,255,255,0.03); border-radius: 8px; margin-bottom: 2rem; }
-.skeleton-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.skeleton-item { height: 80px; background: rgba(255,255,255,0.03); border-radius: 8px; }
-
-.floating-card {
-    position: absolute;
-    background: rgba(15, 23, 42, 0.8);
     border: 1px solid var(--glass-border);
-    padding: 1rem;
-    border-radius: 12px;
-    backdrop-filter: blur(20px);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    color: var(--text-dim);
 }
 
-.card-1 { top: 20%; right: -5%; width: 180px; }
-.card-2 { bottom: 15%; left: -8%; width: 160px; }
-
-.card-icon { width: 30px; height: 30px; border-radius: 6px; }
-.card-icon.blue { background: var(--blue-primary); }
-.card-icon.purple { background: var(--purple-primary); }
-.card-line { height: 6px; flex: 1; background: var(--glass-border); border-radius: 3px; }
-
-/* Mobile Menu */
-.mobile-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
+.skeleton-hero {
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0.02) 25%, 
+        rgba(255,255,255,0.05) 50%, 
+        rgba(255,255,255,0.02) 75%);
+    background-size: 200% 100%;
+    border: 1px solid var(--glass-border);
 }
 
-.mobile-toggle .line {
-    width: 24px;
-    height: 2px;
-    background: #fff;
-    transition: 0.3s;
+.skeleton-item {
+    border: 1px solid var(--glass-border);
+    transition: var(--ease-premium);
 }
 
-@media (max-width: 992px) {
-    .nav-menu { display: none; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero-description { margin-left: auto; margin-right: auto; }
-    .hero-visual { display: flex; justify-content: center; padding: 2rem 0; }
-    .glass-dashboard { width: 90%; height: 320px; }
-    .mobile-toggle { display: flex; }
+/* 7. Floating Elements (Lighting & Depth) */
+.floating-card {
+    border: 1px solid var(--glass-border-bright);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 30px 60px -12px rgba(0,0,0,0.6), 0 18px 36px -18px rgba(0,0,0,0.7);
+}
+
+.card-icon {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+/* 8. Modern Responsive Polishing */
+@media (max-width: 1024px) {
+    .navbar { padding: 1.5rem 0; }
+    .hero-title { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+    .hero { padding-top: 8rem; }
+    .hero-title { font-size: 2.8rem; }
+    .hero-description { font-size: 1.1rem; }
+    
+    .glass-dashboard {
+        transform: scale(0.95);
+        height: 300px;
+    }
+}
+
+/* Smooth State Transitions */
+.revealed {
+    transition: transform 1.2s var(--ease-premium), opacity 1.2s var(--ease-premium) !important;
+}
+
+/* Interactive Shimmer for Skeletons */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
 }
