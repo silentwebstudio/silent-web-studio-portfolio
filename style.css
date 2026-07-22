@@ -251,15 +251,56 @@ body {
     .hero-title { font-size: 3.5rem; }
 }
 
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+}
+
+
+/* Modern Responsive Polishing */
 @media (max-width: 768px) {
-    .hero { padding-top: 8rem; }
-    .hero-title { font-size: 2.8rem; }
-    .hero-description { font-size: 1.1rem; }
-    
+
+    .hero {
+        padding-top: 8rem;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
     .glass-dashboard {
         transform: scale(0.95);
         height: 300px;
     }
+
+
+    /* Mobile Navbar */
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+
+    .mobile-toggle .line {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text-white);
+        margin: 6px 0;
+    }
+
 }
 
 /* Smooth State Transitions */
