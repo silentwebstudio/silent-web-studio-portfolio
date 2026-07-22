@@ -43,10 +43,44 @@ document.querySelectorAll('.hero-content, .hero-visual').forEach(el => {
 
 // Keyframe addition for reveal logic
 const style = document.createElement('style');
+
 style.textContent = `
     .revealed {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
 `;
+
 document.head.append(style);
+
+
+// Mobile Menu Logic
+const mobileToggle = document.querySelector('.mobile-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileToggle && mobileMenu) {
+
+    mobileToggle.addEventListener('click', () => {
+
+        mobileMenu.classList.toggle('active');
+
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+
+        mobileToggle.setAttribute('aria-expanded', !expanded);
+
+    });
+
+
+    document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            mobileMenu.classList.remove('active');
+
+            mobileToggle.setAttribute('aria-expanded', 'false');
+
+        });
+
+    });
+
+}
