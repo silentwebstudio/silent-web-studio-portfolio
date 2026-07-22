@@ -311,7 +311,8 @@ body {
     font-size: 2rem;
 }
 
-}    
+}
+
 /* Smooth State Transitions */
 .revealed {
     transition: transform 1.2s var(--ease-premium), opacity 1.2s var(--ease-premium) !important;
