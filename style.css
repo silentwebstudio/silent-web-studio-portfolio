@@ -115,16 +115,31 @@ h1, h2, h3, h4 {
 
 /* --- Hero --- */
 .hero {
-    padding: 180px 0 100px;
-    min-height: 80vh;
+    padding: 200px 0 120px;
+    min-height: 90vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(59, 130, 246, 0.15);
+    filter: blur(120px);
+    top: 20%;
+    right: -200px;
+    z-index: -1;
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
     margin-bottom: 1.5rem;
-    max-width: 800px;
+    max-width: 850px;
+    letter-spacing: -1.5px;
 }
 
 .hero p {
@@ -134,8 +149,11 @@ h1, h2, h3, h4 {
     margin-bottom: 2.5rem;
 }
 
-.hero-actions { display: flex; gap: 1rem; }
-
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 /* --- Services --- */
 .services { padding: 100px 0; }
 
