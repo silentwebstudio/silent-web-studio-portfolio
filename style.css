@@ -335,3 +335,39 @@ body {
 .mobile-menu .nav-link {
     color: var(--text-muted);
 }
+
+/* Hero Layout */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-visual {
+    position: relative;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-trust {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
