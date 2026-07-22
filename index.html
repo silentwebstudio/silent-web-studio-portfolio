@@ -3,322 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silent Web Studio | Premium Web Development Agency</title>
-    <meta name="description" content="Modern websites that help businesses grow. Silent Web Studio builds fast, responsive, and high-converting websites.">
-    <!-- Google Fonts -->
+    <title>Silent Web Studio | Premium Digital Experiences & Conversion Growth</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Silent Web Studio crafts high-performance, premium websites that turn visitors into loyal customers. Expert UI/UX, Frontend Development, and Branding.">
+    <meta name="keywords" content="Web Design Agency, Premium UI/UX, Custom Web Development, Silent Web Studio, Digital Branding Dubai, London Web Design">
+    <meta name="author" content="Silent Web Studio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://silentwebstudio.com/">
+    <meta property="og:title" content="Silent Web Studio | Luxury Digital Craftsmanship">
+    <meta property="og:description" content="Custom-coded, high-conversion websites for elite brands.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Silent Web Studio",
+      "url": "https://silentwebstudio.com",
+      "logo": "https://silentwebstudio.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-xxx-xxx-xxxx",
+        "contactType": "customer service"
+      }
+    }
+    </script>
 </head>
 <body>
 
-    <!-- Progress Bar -->
-    <div id="progress-container">
-        <div id="progress-bar"></div>
-    </div>
+    <!-- Animated Background Background -->
+    <div class="bg-glow"></div>
 
     <!-- Navigation -->
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <span class="accent">Silent</span> Web Studio
-            </div>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">SILENT<span>WEB</span></a>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="btn btn-outline">Start a Project</a></li>
             </ul>
-            <div class="nav-btns">
-                <a href="#contact" class="btn-secondary">Get a Quote</a>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-bg">
-                <div class="blob"></div>
-                <div class="blob"></div>
-            </div>
-            <div class="container hero-content">
-                <h1 class="reveal">Modern Websites That Help <span class="text-gradient">Businesses Grow.</span></h1>
-                <p class="reveal">Silent Web Studio builds fast, responsive, and high-converting websites for businesses worldwide.</p>
-                <div class="hero-btns reveal">
-                    <a href="#portfolio" class="btn-primary">View Portfolio</a>
-                    <a href="#contact" class="btn-outline">Free Consultation</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="reveal">
+                <span class="badge">Next-Gen Digital Solutions</span>
+                <h1>Precision Design. <br><span class="text-gradient">Unrivaled Growth.</span></h1>
+                <p>Silent Web Studio builds bespoke, high-performance digital experiences for brands that refuse to settle for "good enough."</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn btn-primary">View Our Work</a>
+                    <a href="#contact" class="btn btn-secondary">Book a Consultation</a>
                 </div>
-                <div class="hero-stats reveal">
-                    <div class="stat">
-                        <span class="counter" data-target="150">0</span>+
-                        <p>Projects Done</p>
-                    </div>
-                    <div class="stat">
-                        <span class="counter" data-target="98">0</span>%
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat">
-                        <span class="counter" data-target="5">0</span>+
-                        <p>Years Experience</p>
+                <div class="trust-badges">
+                    <span>Trusted by leaders at:</span>
+                    <div class="badges-grid">
+                        <i class="fab fa-apple"></i>
+                        <i class="fab fa-stripe"></i>
+                        <i class="fab fa-airbnb"></i>
+                        <i class="fab fa-amazon"></i>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container grid-2">
-                <div class="about-text reveal">
-                    <span class="tag">Who We Are</span>
-                    <h2>We craft digital experiences that <span class="accent">matter.</span></h2>
-                    <p>At Silent Web Studio, our mission is simple: to bridge the gap between complex technology and intuitive design. We don't just build websites; we create digital assets that drive revenue and establish brand authority.</p>
-                    <p>Based on a foundation of clean code and psychological design principles, we help international clients stand out in a crowded digital landscape.</p>
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Expertise</h2>
+                <p>We combine technical excellence with psychological design patterns to drive results.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                    <h3>Premium UI/UX</h3>
+                    <p>Interfaces that aren't just beautiful, but intuitively guide users toward conversion.</p>
                 </div>
-                <div class="about-image reveal">
-                    <div class="glass-card">
-                        <i class="fas fa-quote-left"></i>
-                        <h3>"Design is not just what it looks like and feels like. Design is how it works."</h3>
-                        <p>- Steve Jobs</p>
-                    </div>
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-code"></i></div>
+                    <h3>Technical SEO</h3>
+                    <p>Clean code architecture designed for lightning-fast speeds and Google's top spots.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-rocket"></i></div>
+                    <h3>Brand Strategy</h3>
+                    <p>Positioning your brand as a market leader through cohesive visual storytelling.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tag">Our Expertise</span>
-                    <h2>Solutions tailored to your needs</h2>
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Selected Works</h2>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item reveal">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bbbda546697a?auto=format&fit=crop&w=800&q=80" alt="Fintech Dashboard">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>Lumina Banking</h3>
+                                <p>Fintech / UI Design</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card reveal">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Business Websites</h3>
-                        <p>Professional corporate sites designed to establish trust and authority.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <i class="fas fa-rocket"></i>
-                        <h3>Landing Pages</h3>
-                        <p>High-converting one-pagers focused on turning visitors into customers.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <i class="fas fa-user-tie"></i>
-                        <h3>Portfolio Websites</h3>
-                        <p>Elegant showrooms for creatives and professionals to display their work.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Website Redesign</h3>
-                        <p>Modernizing your outdated site with the latest design trends and tech.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <i class="fas fa-tools"></i>
-                        <h3>Maintenance</h3>
-                        <p>Ensuring your site stays secure, fast, and updated 24/7.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Responsive Design</h3>
-                        <p>Websites that look and perform flawlessly on any device screen.</p>
+                <!-- Project 2 -->
+                <div class="portfolio-item reveal">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="E-commerce Experience">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>Aura Watches</h3>
+                                <p>Luxury E-commerce</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tag">Recent Work</span>
-                    <h2>Featured Projects</h2>
-                </div>
-                <div class="portfolio-grid">
-                    <div class="project-card reveal">
-                        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80')">
-                            <div class="project-overlay"><span>Coming Soon</span></div>
-                        </div>
-                        <div class="project-info">
-                            <h4>The Sharp Edge</h4>
-                            <p>Barber Shop Website</p>
-                        </div>
-                    </div>
-                    <div class="project-card reveal">
-                        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80')">
-                            <div class="project-overlay"><span>Coming Soon</span></div>
-                        </div>
-                        <div class="project-info">
-                            <h4>Iron Pulse</h4>
-                            <p>Fitness & Gym Website</p>
-                        </div>
-                    </div>
-                    <div class="project-card reveal">
-                        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80')">
-                            <div class="project-overlay"><span>Coming Soon</span></div>
-                        </div>
-                        <div class="project-info">
-                            <h4>White Pearl</h4>
-                            <p>Dental Clinic Website</p>
-                        </div>
-                    </div>
-                    <div class="project-card reveal">
-                        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80')">
-                            <div class="project-overlay"><span>Coming Soon</span></div>
-                        </div>
-                        <div class="project-info">
-                            <h4>Urban Cravings</h4>
-                            <p>Restaurant Website</p>
-                        </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-box glass reveal">
+                <div class="contact-info">
+                    <h2>Let's build something <span class="text-gradient">extraordinary.</span></h2>
+                    <p>Ready to scale? Our team is standing by to help you dominate your market.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder="Full Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder="Email Address">
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required placeholder="Project Details"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
+                    <div id="form-status"></div>
+                </form>
             </div>
-        </section>
-
-        <!-- Why Choose Us -->
-        <section class="why-us">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tag">Why Us</span>
-                    <h2>The Silent Advantage</h2>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-item reveal">
-                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                        <h4>Modern Design</h4>
-                        <p>Pixel-perfect aesthetics that reflect your brand's quality.</p>
-                    </div>
-                    <div class="feature-item reveal">
-                        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                        <h4>Fast Loading</h4>
-                        <p>Optimized for speed to keep your bounce rates low.</p>
-                    </div>
-                    <div class="feature-item reveal">
-                        <div class="feature-icon"><i class="fas fa-expand"></i></div>
-                        <h4>Mobile Responsive</h4>
-                        <p>Flawless experience across desktops, tablets, and phones.</p>
-                    </div>
-                    <div class="feature-item reveal">
-                        <div class="feature-icon"><i class="fas fa-search-dollar"></i></div>
-                        <h4>SEO Friendly</h4>
-                        <p>Built-in SEO best practices to help you rank higher.</p>
-                    </div>
-                    <div class="feature-item reveal">
-                        <div class="feature-icon"><i class="fas fa-code"></i></div>
-                        <h4>Clean Code</h4>
-                        <p>Scalable, maintainable, and bug-free architecture.</p>
-                    </div>
-                    <div class="feature-item reveal">
-                        <div class="feature-icon"><i class="fas fa-heart"></i></div>
-                        <h4>Client Focused</h4>
-                        <p>Your business goals are at the heart of our process.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section class="process">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tag">Workflow</span>
-                    <h2>How we bring ideas to life</h2>
-                </div>
-                <div class="process-steps">
-                    <div class="step reveal">
-                        <div class="step-num">01</div>
-                        <h4>Discovery</h4>
-                        <p>We analyze your business goals and audience needs.</p>
-                    </div>
-                    <div class="step reveal">
-                        <div class="step-num">02</div>
-                        <h4>Design</h4>
-                        <p>We create interactive prototypes and UI visuals.</p>
-                    </div>
-                    <div class="step reveal">
-                        <div class="step-num">03</div>
-                        <h4>Development</h4>
-                        <p>We build your site using the latest stable tech stacks.</p>
-                    </div>
-                    <div class="step reveal">
-                        <div class="step-num">04</div>
-                        <h4>Launch</h4>
-                        <p>Final testing, optimization, and deployment to the world.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="contact-wrapper glass-card reveal">
-                    <div class="contact-info">
-                        <h2>Ready to scale? <br><span class="accent">Let's talk.</span></h2>
-                        <p>Have a project in mind? We'd love to hear from you.</p>
-                        <div class="info-links">
-                            <a href="mailto:hello@silentwebstudio.com"><i class="fas fa-envelope"></i> hello@silentwebstudio.com</a>
-                            <a href="#"><i class="fab fa-github"></i> github.com/silentwebstudio</a>
-                        </div>
-                    </div>
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Tell us about your project" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary w-100">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <div class="logo">Silent Web Studio</div>
-                <p>Building the digital future, one pixel at a time.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">SILENT<span>WEB</span></a>
+                    <p>Global design studio creating the future of the web.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Studio</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Process</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">SEO</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Silent Web Studio. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Silent Web Studio. All rights reserved.</p>
+                <a href="https://wa.me/yournumber" class="whatsapp-float"><i class="fab fa-whatsapp"></i> Chat with us</a>
+            </div>
         </div>
     </footer>
-
-    <!-- Back to Top -->
-    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>
