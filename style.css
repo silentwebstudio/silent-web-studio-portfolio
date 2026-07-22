@@ -167,22 +167,33 @@ h1, h2, h3, h4 {
 }
 
 .service-card {
-    background: var(--bg-card);
+    background: linear-gradient(180deg, #17171c, #111114);
     padding: 2.5rem;
-    border-radius: 16px;
+    border-radius: 18px;
     border: 1px solid var(--border);
-    transition: var(--transition);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
 }
-
 .service-card:hover {
     border-color: var(--primary);
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(59,130,246,0.15);
 }
 
 .service-card i {
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.service-card p {
+    color: var(--text-muted);
 }
 
 /* --- Portfolio Coming Soon --- */
