@@ -45,8 +45,7 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    selection-background: var(--blue-primary);
-    selection-color: white;
+   
 }
 
 ::selection {
@@ -201,6 +200,7 @@ body {
 
 /* 6. Dashboard Mockup (The "Linear" Look) */
 .glass-dashboard {
+    position: relative;
     background: linear-gradient(160deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.2) 100%);
     box-shadow: var(--shadow-lg), inset 0 0 0 1px var(--glass-border-bright);
 }
