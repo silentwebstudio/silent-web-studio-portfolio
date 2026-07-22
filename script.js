@@ -1,119 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Sticky Header & Progress Bar ---
-    const header = document.querySelector('header');
-    const progressBar = document.getElementById('progress-bar');
+    // 1. Scroll Reveal Animation using Intersection Observer
+    const observerOptions = {
+        threshold: 0.15
+    };
 
-    window.addEventListener('scroll', () => {
-        // Sticky Header
-        if (window.scrollY > 50) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
-        }
-
-        // Scroll Progress
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        progressBar.style.width = scrolled + "%";
-
-        // Back to Top Visibility
-        const backToTop = document.getElementById('back-to-top');
-        if (window.scrollY > 500) {
-            backToTop.style.display = 'grid';
-        } else {
-            backToTop.style.display = 'none';
-        }
-    });
-
-    // --- Mobile Menu Toggle ---
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        // Simple logic to show/hide for the demo
-        if(navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '80px';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = '#0a0a0b';
-            navLinks.style.padding = '40px';
-        }
-        burger.classList.toggle('toggle');
-    });
-
-    // --- Scroll Reveal Animation ---
-    const revealElements = document.querySelectorAll('.reveal');
-    
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => {
+        revealObserver.observe(el);
+    });
 
-    // --- Counter Animation ---
-    const counters = document.querySelectorAll('.counter');
-    
-    const countObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = +entry.target.getAttribute('data-target');
-                const count = +entry.target.innerText;
-                const speed = 200; 
-                const inc = target / speed;
+    // 2. Navbar Background Toggle on Scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
-                const updateCount = () => {
-                    const current = +entry.target.innerText;
-                    if (current < target) {
-                        entry.target.innerText = Math.ceil(current + inc);
-                        setTimeout(updateCount, 1);
-                    } else {
-                        entry.target.innerText = target;
-                    }
-                }
-                updateCount();
-                countObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 1.0 });
+    // 3. Mobile Menu Logic
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-    counters.forEach(counter => countObserver.observe(counter));
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        // For a world-class feel, add a full-screen overlay menu here
+        // Simple toggle for this snippet:
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '100%';
+        navLinks.style.left = '0';
+        navLinks.style.width = '100%';
+        navLinks.style.background = 'rgba(10,10,12,0.95)';
+        navLinks.style.padding = '2rem';
+    });
 
-    // --- Form Validation & Submission ---
+    // 4. Contact Form Validation & Animation
     const contactForm = document.getElementById('contact-form');
-    
+    const formStatus = document.getElementById('form-status');
+
     if(contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Simple Animation for feedback
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = "Sending...";
-            btn.disabled = true;
+            // Premium Feedback Loop
+            const submitBtn = contactForm.querySelector('button');
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
 
+            // Simulate API Call
             setTimeout(() => {
-                alert("Thank you! Your message has been sent successfully.");
-                btn.innerText = originalText;
-                btn.disabled = false;
-                contactForm.reset();
-            }, 2000);
+                contactForm.style.display = 'none';
+                formStatus.innerHTML = `
+                    <div class="reveal active" style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-check-circle" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
+                        <h3>Message Received!</h3>
+                        <p>We'll get back to you within 24 hours.</p>
+                    </div>
+                `;
+            }, 1500);
         });
     }
 
-    // --- Back to Top Smooth Scroll ---
-    document.getElementById('back-to-top').addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    // 5. Smooth Scroll for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });
