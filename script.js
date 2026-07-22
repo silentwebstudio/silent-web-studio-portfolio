@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Scroll Reveal Animation using Intersection Observer
+    // 1. Scroll Reveal Animation
     const observerOptions = {
-        threshold: 0.15
+        threshold: 0.1
     };
 
-    const revealObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
@@ -14,71 +14,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     document.querySelectorAll('.reveal').forEach(el => {
-        revealObserver.observe(el);
+        observer.observe(el);
     });
 
-    // 2. Navbar Background Toggle on Scroll
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    // 2. Simple Mobile Menu Toggle
+    const toggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav-links');
 
-    // 3. Mobile Menu Logic
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        // For a world-class feel, add a full-screen overlay menu here
-        // Simple toggle for this snippet:
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.background = 'rgba(10,10,12,0.95)';
-        navLinks.style.padding = '2rem';
-    });
-
-    // 4. Contact Form Validation & Animation
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-
-    if(contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Premium Feedback Loop
-            const submitBtn = contactForm.querySelector('button');
-            submitBtn.innerText = 'Sending...';
-            submitBtn.disabled = true;
-
-            // Simulate API Call
-            setTimeout(() => {
-                contactForm.style.display = 'none';
-                formStatus.innerHTML = `
-                    <div class="reveal active" style="text-align: center; padding: 2rem;">
-                        <i class="fas fa-check-circle" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
-                        <h3>Message Received!</h3>
-                        <p>We'll get back to you within 24 hours.</p>
-                    </div>
-                `;
-            }, 1500);
+    if(toggle) {
+        toggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            if(nav.style.display === 'flex') {
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = '#0a0a0c';
+                nav.style.padding = '2rem';
+            }
         });
     }
 
-    // 5. Smooth Scroll for all links
+    // 3. Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
