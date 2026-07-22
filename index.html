@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,47 +19,64 @@
 <body>
 
     <!-- Header -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#" class="logo">SILENT<span>WEB</span></a>
-            <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact" class="btn btn-sm btn-primary">Start Project</a>
+            
+            <div class="nav-wrapper">
+                <div class="nav-links">
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#contact" class="btn btn-sm btn-primary">Start Project</a>
+                </div>
             </div>
-            <button class="mobile-toggle" aria-label="Toggle Menu">
-                <span></span><span></span>
+
+            <button class="mobile-toggle" aria-label="Open Menu">
+                <span class="line"></span>
+                <span class="line"></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-  <header class="hero">
-    <div class="container hero-grid">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <a href="#" class="logo">SILENT<span>WEB</span></a>
+                <button class="mobile-close" aria-label="Close Menu">&times;</button>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact" class="btn btn-primary">Start Project</a>
+            </div>
+        </div>
+    </div>
 
-        <div class="hero-content reveal">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
                 <div class="tagline">Development Studio</div>
                 <h1>We Build <span class="text-gradient">Modern Websites</span> For Businesses Ready To Grow</h1>
-               <p>Silent Web Studio develops fast, responsive, and professional websites that help businesses build trust and grow their online presence.</p>
+                <p>Silent Web Studio develops fast, responsive, and professional websites that help businesses build trust and grow their online presence.</p>
                 <div class="hero-actions">
                     <a href="https://wa.me/923484038254" class="btn btn-primary">Start Your Project</a>
                     <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
-                </div></div>
+                </div>
+            </div>
 
             <div class="hero-image reveal">
                 <div class="browser-window">
                     <div class="browser-top">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span></span><span></span><span></span>
                     </div>
-
                     <div class="browser-content">
                         <div class="browser-title"></div>
                         <div class="browser-line"></div>
                         <div class="browser-line short"></div>
-
                         <div class="browser-cards">
                             <div class="mini-card"></div>
                             <div class="mini-card"></div>
@@ -68,26 +85,26 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
+
     <!-- Services -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-title reveal">
-                <span>Our Expertise</span>
-                <h2>Professional Website Solutions For Growing Businesses</h2>
+                <span class="tagline">Our Expertise</span>
+                <h2>Professional Website Solutions</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
                     <i class="fas fa-briefcase"></i>
-                    <h3>Business Website Development</h3>
+                    <h3>Business Websites</h3>
                     <p>Custom-tailored websites designed to represent your brand professionally and convert visitors.</p>
                 </div>
                 <div class="service-card reveal">
                     <i class="fas fa-rocket"></i>
-                    <h3>High-Converting Landing Pages</h3>
-                  <p>Focused landing pages designed to showcase your offers and guide visitors toward action.</p>
+                    <h3>Landing Pages</h3>
+                    <p>Focused landing pages designed to showcase your offers and guide visitors toward action.</p>
                 </div>
                 <div class="service-card reveal">
                     <i class="fas fa-magic"></i>
@@ -96,13 +113,13 @@
                 </div>
                 <div class="service-card reveal">
                     <i class="fas fa-mobile-alt"></i>
-                    <h3>Responsive Web Development</h3>
+                    <h3>Responsive Design</h3>
                     <p>Ensuring your website looks and functions perfectly on desktops, tablets, and smartphones.</p>
                 </div>
                 <div class="service-card reveal">
                     <i class="fas fa-tools"></i>
-                    <h3>Website Performance Optimization</h3>
-                   <p>Improving website speed, performance, and user experience for better results.</p>
+                    <h3>Optimization</h3>
+                    <p>Improving website speed, performance, and user experience for better results.</p>
                 </div>
             </div>
         </div>
@@ -112,8 +129,8 @@
     <section class="why-us">
         <div class="container grid-2">
             <div class="reveal">
-                <div class="tagline">Why Us</div>
-               <h2>Websites Built With Quality And Purpose</h2>
+                <span class="tagline">Why Us</span>
+                <h2>Websites Built With Quality And Purpose</h2>
                 <p>We create websites that combine modern design, clean development, and business-focused solutions to help you build a stronger online presence.</p>
                 <ul class="check-list">
                     <li><i class="fas fa-check"></i> Modern Design Trends</li>
@@ -123,7 +140,6 @@
                 </ul>
             </div>
             <div class="visual-box reveal">
-                <!-- Abstract Developer UI Graphic -->
                 <div class="code-window">
                     <div class="dots"><span></span><span></span><span></span></div>
                     <div class="code-lines">
@@ -139,9 +155,9 @@
         <div class="container text-center reveal">
             <h2>Our Portfolio</h2>
             <div class="coming-soon-box">
-                <div class="status-badge">Coming Soon</div>
-                <h3>Our Projects Are Coming Soon</h3>
-            <p>We are currently building our portfolio. As we complete professional projects, they will be showcased here to demonstrate our work and expertise.</p>
+                <div class="status-badge">Upcoming</div>
+                <h3>Projects Coming Soon</h3>
+                <p>We are currently finalizing professional projects. Once complete, they will be showcased here to demonstrate our expertise in high-performance web development.</p>
             </div>
         </div>
     </section>
@@ -150,28 +166,28 @@
     <section id="process" class="process"> 
         <div class="container">
             <div class="section-title reveal">
-                <span>Methodology</span>
+                <span class="tagline">Methodology</span>
                 <h2>How We Work</h2>
             </div>
             <div class="process-steps">
                 <div class="step reveal">
                     <div class="step-num">01</div>
-                    <h4>Understand Your Business</h4>
+                    <h4>Understand</h4>
                     <p>We start by learning about your goals, audience, and vision.</p>
                 </div>
                 <div class="step reveal">
                     <div class="step-num">02</div>
-                    <h4>Plan The Website</h4>
+                    <h4>Plan</h4>
                     <p>Strategizing the structure and user experience for maximum impact.</p>
                 </div>
                 <div class="step reveal">
                     <div class="step-num">03</div>
-                    <h4>Design & Develop</h4>
+                    <h4>Develop</h4>
                     <p>Crafting the visuals and writing clean, high-performance code.</p>
                 </div>
                 <div class="step reveal">
                     <div class="step-num">04</div>
-                    <h4>Launch & Support</h4>
+                    <h4>Launch</h4>
                     <p>Taking your site live and providing ongoing technical support.</p>
                 </div>
             </div>
@@ -182,8 +198,8 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-card glass reveal">
-                <div class="tagline">About Studio</div>
-              <h2>Building Websites With Purpose</h2>
+                <span class="tagline">About Studio</span>
+                <h2>Building Websites With Purpose</h2>
                 <p>Silent Web Studio is a growing website development studio focused on creating quality digital experiences. We believe that every business, regardless of size, deserves a professional and modern home on the web.</p>
                 <p>Our philosophy is rooted in simplicity and performance. We focus on clean development practices that ensure your website is not only beautiful but also fast, secure, and easy to manage.</p>
             </div>
@@ -216,10 +232,16 @@
                     </div>
                 </div>
                 <div class="contact-form-placeholder glass reveal">
-                    <form action="https://formspree.io/f/mvzebzqz"method="POST">
-                        <input type="text" name="name" placeholder="Name" required>
-                       <input type="email" name="email" placeholder="Email" required>
-                       <textarea name="message" placeholder="Tell us about your project" rows="5"></textarea>
+                    <form action="https://formspree.io/f/mvzebzqz" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell us about your project" rows="5"></textarea>
+                        </div>
                         <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     </form>
                 </div>
@@ -240,7 +262,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Silent Web Studio. All rights reserved.</p>
+                <p>&copy; 2026 Silent Web Studio. Built for Performance.</p>
             </div>
         </div>
     </footer>
