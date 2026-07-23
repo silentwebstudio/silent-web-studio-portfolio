@@ -1650,3 +1650,40 @@ transition:var(--transition);
     z-index:99999;
 }
 
+/* ==========================================
+   LIGHT THEME
+========================================== */
+
+body.light-theme{
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+body.light-theme .header{
+    background:rgba(255,255,255,.85);
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+body.light-theme .nav__link{
+    color:#334155;
+}
+
+body.light-theme .section-title,
+body.light-theme .hero__title,
+body.light-theme .services__card-title{
+    color:#0f172a;
+}
+
+body.light-theme .services__card,
+body.light-theme .pricing__card,
+body.light-theme .contact__form-wrapper{
+    background:#ffffff;
+    border-color:rgba(0,0,0,.08);
+}
+
+body.light-theme p,
+body.light-theme .hero__description,
+body.light-theme .services__card-description{
+    color:#475569;
+}
+
