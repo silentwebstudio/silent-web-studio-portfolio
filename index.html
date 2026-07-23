@@ -3,181 +3,685 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SILENT WEB STUDIO | Elite Digital Engineering</title>
-    <meta name="description" content="Crafting silent digital dominance through high-performance web engineering.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Grain Overlay for Film Aesthetic -->
-    <div class="grain"></div>
-    
-    <!-- Magnetic Cursor Follower -->
-    <div class="cursor" id="cursor"></div>
 
-    <!-- Ambient Lighting -->
-    <div class="orb-container">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+    <title>Silent Web Studio — Premium Digital Architecture & Design</title>
+<meta name="description" content="Silent Web Studio is a high-end digital agency specializing in premium web experiences, minimal design, and enterprise-grade front-end engineering.">
+<meta name="keywords" content="Digital Agency, UX Design, UI Development, Premium Web Design, Front-end Engineering, Silent Web Studio">
+<meta name="author" content="Silent Web Studio">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#000000">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:title" content="Silent Web Studio — Premium Digital Architecture">
+<meta property="og:description" content="Crafting award-winning digital experiences through minimal design and advanced engineering.">
+<meta property="og:image" content="assets/images/og-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="">
+<meta property="twitter:title" content="Silent Web Studio — Premium Digital Architecture">
+<meta property="twitter:description" content="Crafting award-winning digital experiences through minimal design and advanced engineering.">
+<meta property="twitter:image" content="assets/images/twitter-card.jpg">
+
+<!-- Canonical Link -->
+<link rel="canonical" href="">
+
+<!-- Favicon & Manifest -->
+<link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Google Fonts Placeholder -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- CSS Link Placeholder -->
+<link rel="stylesheet" href="assets/css/main.css"><!-- ================================================
+PRELOADER & UTILITIES
+================================================ -->
+
+<div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__content">
+        <span class="preloader__logo">Silent Web Studio</span>
+        <div class="preloader__bar-container">
+            <div class="preloader__bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <span class="preloader__percentage">0%</span>
     </div>
+</div>
 
-    <nav class="nav" id="navbar">
-        <div class="nav-inner">
-            <a href="#" class="logo-wrap">
-                <div class="logo-symbol"></div>
-                <span class="logo-type">SILENT<span class="muted">WEBSTUDIO</span></span>
+<div class="custom-cursor" id="cursor" aria-hidden="true">
+    <div class="custom-cursor__inner"></div>
+    <div class="custom-cursor__outer"></div>
+</div>
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar"></div>
+</div>
+
+<div class="background-effects" aria-hidden="true">
+    <div class="background-effects__noise"></div>
+    <div class="background-effects__gradient"></div>
+    <div class="background-effects__mesh"></div>
+</div>
+
+<!-- ================================================
+HEADER & NAVIGATION
+================================================ -->
+
+<header class="header" id="header">
+    <div class="container header__container">
+        <div class="header__logo">
+            <a href="/" class="header__logo-link" aria-label="Silent Web Studio Home">
+                <span class="header__logo-text">SILENT</span>
             </a>
+        </div>
+
+        <nav class="nav nav--desktop" aria-label="Primary Navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                <li class="nav__item"><a href="#portfolio" class="nav__link">Work</a></li>
+                <li class="nav__item"><a href="#process" class="nav__link">Process</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                <span class="theme-toggle__icon"></span>
+            </button>
+            <a href="#contact" class="btn btn--primary header__cta">Start a Project</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger__box">
+                    <span class="hamburger__inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<nav class="nav--mobile" id="mobile-menu" aria-hidden="true">
+    <div class="nav--mobile__inner">
+        <ul class="nav--mobile__list">
+            <li class="nav--mobile__item"><a href="#about" class="nav--mobile__link">About</a></li>
+            <li class="nav--mobile__item"><a href="#services" class="nav--mobile__link">Services</a></li>
+            <li class="nav--mobile__item"><a href="#portfolio" class="nav--mobile__link">Work</a></li>
+            <li class="nav--mobile__item"><a href="#process" class="nav--mobile__link">Process</a></li>
+            <li class="nav--mobile__item"><a href="#contact" class="nav--mobile__link">Contact</a></li>
+        </ul>
+        <div class="nav--mobile__footer">
+            <div class="nav--mobile__socials">
+                <a href="#" class="nav--mobile__social-link">LinkedIn</a>
+                <a href="#" class="nav--mobile__social-link">Twitter</a>
+                <a href="#" class="nav--mobile__social-link">Instagram</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main id="main-content">
+    
+    <!-- ================================================
+    HERO SECTION
+    ================================================ -->
+
+    <section class="hero" id="hero">
+        <div class="container hero__container">
+            <div class="hero__badge-wrapper">
+                <span class="badge hero__badge">Pioneering Digital Excellence</span>
+            </div>
+            <h1 class="hero__title">
+                Architecture for the <span class="hero__title--gradient">Digital Future.</span>
+            </h1>
+            <p class="hero__description">
+                We design and build high-end digital products for brands that refuse to settle for the ordinary. Minimal aesthetic meets enterprise-grade engineering.
+            </p>
+            <div class="hero__actions">
+                <a href="#portfolio" class="btn btn--primary hero__btn">View Our Work</a>
+                <a href="#services" class="btn btn--secondary hero__btn">Our Services</a>
+            </div>
             
-            <div class="nav-links">
-                <a href="#services" class="nav-item">Services</a>
-                <a href="#work" class="nav-item">Work</a>
-                <a href="#process" class="nav-item">Process</a>
+            <div class="hero__visual">
+                <div class="hero__image-container">
+                    <img src="assets/images/hero-placeholder.webp" alt="Silent Web Studio Visual Showcase" class="hero__image" loading="eager">
+                    <div class="hero__floating-card hero__floating-card--1">
+                        <span class="hero__floating-card-title">Performance</span>
+                        <span class="hero__floating-card-value">100/100</span>
+                    </div>
+                    <div class="hero__floating-card hero__floating-card--2">
+                        <span class="hero__floating-card-title">Status</span>
+                        <span class="hero__floating-card-value">Online</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="nav-action">
-                <div class="magnetic">
-                    <a href="https://wa.me/923484038254" class="btn-premium">
-                        <span>Start a Project</span>
-                    </a>
+            <div class="hero__social-proof">
+                <p class="hero__social-proof-text">Trusted by industry-leading innovators</p>
+                <div class="hero__logos-placeholder">
+                    <!-- Logos will be placed here via CSS background or future IMG tags -->
+                </div>
+            </div>
+
+            <div class="hero__scroll-indicator" aria-hidden="true">
+                <span class="hero__scroll-line"></span>
+                <span class="hero__scroll-text">Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    ABOUT SECTION
+    ================================================ -->
+
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="about__grid">
+                <div class="about__content">
+                    <h2 class="section-title">About the Studio</h2>
+                    <p class="section-subtitle">A collective of specialists dedicated to the art of the web.</p>
+                    <div class="about__text">
+                        <p>Silent Web Studio was founded on the principle that the most powerful digital experiences are those that work perfectly and speak softly. We eliminate the noise, focusing on speed, accessibility, and timeless aesthetics.</p>
+                        <p>Our approach is rooted in senior-level expertise. We don't just build websites; we architect digital ecosystems that scale with your ambition.</p>
+                    </div>
+                    <div class="about__stats">
+                        <div class="about__stat-item">
+                            <span class="about__stat-number">Pure</span>
+                            <span class="about__stat-label">Engineering</span>
+                        </div>
+                        <div class="about__stat-item">
+                            <span class="about__stat-number">Minimal</span>
+                            <span class="about__stat-label">Aesthetic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__image-area">
+                    <div class="about__image-wrapper">
+                        <img src="assets/images/about-placeholder.webp" alt="Our Studio Philosophy" class="about__image" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="reveal">
-                        <span class="eyebrow">Based in Pakistan • Serving Worldwide</span>
-                    </div>
-                    <h1 class="hero-title">
-                        <span class="line">Engineering <span class="italic-text">Silent</span></span>
-                        <span class="line">Digital Dominance.</span>
-                    </h1>
-                    <p class="hero-sub">
-                        We build ultra-fast, high-conversion web systems for brands that refuse to settle for "average."
-                    </p>
-                    <div class="hero-cta-group">
-                        <div class="magnetic">
-                            <a href="#work" class="btn-main">View Showcase</a>
-                        </div>
-                        <a href="https://wa.me/923484038254" class="btn-link">Book a Discovery Call →</a>
-                    </div>
-                </div>
-                
-                <div class="hero-visual">
-                    <div class="bento-visual">
-                        <div class="bento-box main-view">
-                            <div class="glass-inner">
-                                <div class="mock-nav"><span></span><span></span></div>
-                                <div class="mock-content"></div>
-                            </div>
-                        </div>
-                        <div class="bento-box stats-view">
-                            <div class="pulse-circle"></div>
-                        </div>
-                    </div>
-                </div>
+    <!-- ================================================
+    SERVICES SECTION
+    ================================================ -->
+
+    <section class="services" id="services">
+        <div class="container services__container">
+            <div class="section-header">
+                <h2 class="section-title">Core Services</h2>
+                <p class="section-subtitle">Comprehensive solutions for the modern web.</p>
             </div>
-        </section>
+            
+            <div class="services__grid">
+                <!-- Service 1 -->
+                <article class="services__card">
+                    <div class="services__icon-container" aria-hidden="true">
+                        <svg class="services__icon" viewBox="0 0 24 24" width="32" height="32"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="services__card-title">Digital Strategy</h3>
+                    <p class="services__card-description">We align your business objectives with high-impact digital roadmaps and architecture.</p>
+                    <a href="#contact" class="btn btn--text services__link">Learn More <span aria-hidden="true">→</span></a>
+                </article>
 
-        <!-- Services Section (Bento Grid) -->
-        <section class="services" id="services">
-            <div class="container">
-                <div class="section-head">
-                    <span class="label">Expertise</span>
-                    <h2 class="title-large">Services that scale.</h2>
-                </div>
-                
-                <div class="bento-grid">
-                    <div class="bento-card reveal-up lg">
-                        <h3>Full-Stack Engineering</h3>
-                        <p>High-performance applications built with Next.js and robust cloud architectures.</p>
-                        <div class="bento-icon"></div>
+                <!-- Service 2 -->
+                <article class="services__card">
+                    <div class="services__icon-container" aria-hidden="true">
+                        <svg class="services__icon" viewBox="0 0 24 24" width="32" height="32"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 16L16 12L12 8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
                     </div>
-                    <div class="bento-card reveal-up md">
-                        <h3>UI/UX Design</h3>
-                        <p>Minimalist, conversion-focused design systems.</p>
+                    <h3 class="services__card-title">UX/UI Design</h3>
+                    <p class="services__card-description">Premium user experiences designed with precision, focusing on usability and luxury aesthetic.</p>
+                    <a href="#contact" class="btn btn--text services__link">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+
+                <!-- Service 3 -->
+                <article class="services__card">
+                    <div class="services__icon-container" aria-hidden="true">
+                        <svg class="services__icon" viewBox="0 0 24 24" width="32" height="32"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <div class="bento-card reveal-up md">
-                        <h3>Performance SEO</h3>
-                        <p>Technical optimization that crushes competition.</p>
+                    <h3 class="services__card-title">Web Development</h3>
+                    <p class="services__card-description">Scalable, accessible, and high-performance front-end engineering using modern technologies.</p>
+                    <a href="#contact" class="btn btn--text services__link">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+
+                <!-- Service 4 -->
+                <article class="services__card">
+                    <div class="services__icon-container" aria-hidden="true">
+                        <svg class="services__icon" viewBox="0 0 24 24" width="32" height="32"><path d="M12 2v20M2 12h20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <div class="bento-card reveal-up lg">
-                        <h3>Custom CMS</h3>
-                        <p>Empowering teams with tailored editing experiences.</p>
+                    <h3 class="services__card-title">E-Commerce</h3>
+                    <p class="services__card-description">Bespoke online shopping experiences built for conversion, speed, and seamless management.</p>
+                    <a href="#contact" class="btn btn--text services__link">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+
+                <!-- Service 5 -->
+                <article class="services__card">
+                    <div class="services__icon-container" aria-hidden="true">
+                        <svg class="services__icon" viewBox="0 0 24 24" width="32" height="32"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                </div>
+                    <h3 class="services__card-title">SEO & Analytics</h3>
+                    <p class="services__card-description">Search engine optimization and data-driven insights to maximize your digital presence.</p>
+                    <a href="#contact" class="btn btn--text services__link">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+
+                <!-- Service 6 -->
+                <article class="services__card">
+                    <div class="services__icon-container" aria-hidden="true">
+                        <svg class="services__icon" viewBox="0 0 24 24" width="32" height="32"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="services__card-title">Performance Audit</h3>
+                    <p class="services__card-description">Deep technical analysis to optimize loading times, accessibility, and core web vitals.</p>
+                    <a href="#contact" class="btn btn--text services__link">Learn More <span aria-hidden="true">→</span></a>
+                </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Portfolio Section -->
-        <section class="work" id="work">
-            <div class="container">
-                <div class="work-header">
-                    <h2 class="title-large">Selected Work</h2>
-                    <p class="muted">Excellence in every pixel.</p>
-                </div>
-                
-                <div class="work-grid">
-                    <div class="work-card reveal-up">
-                        <div class="work-img">
-                            <div class="work-overlay"><span>Projects Coming Soon</span></div>
-                        </div>
-                        <div class="work-meta">
-                            <span class="category">Digital Identity / 2024</span>
-                            <h3>Strategic Brand Platform</h3>
-                        </div>
-                    </div>
-                    <div class="work-card reveal-up">
-                        <div class="work-img">
-                            <div class="work-overlay"><span>Projects Coming Soon</span></div>
-                        </div>
-                        <div class="work-meta">
-                            <span class="category">Product Engineering / 2024</span>
-                            <h3>SaaS Dashboard Architecture</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- ================================================
+    WHY CHOOSE US
+    ================================================ -->
 
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="container">
-                <div class="cta-banner reveal-up">
-                    <h2 class="title-giant">Let's build the <span class="text-gradient">future.</span></h2>
-                    <div class="magnetic">
-                        <a href="https://wa.me/923484038254" class="btn-giant">Start Project</a>
-                    </div>
-                    <div class="footer-contacts">
-                        <span>silentwebstudio@gmail.com</span>
-                        <span>+92 348 4038254</span>
-                    </div>
+    <section class="why-us">
+        <div class="container why-us__container">
+            <div class="why-us__grid">
+                <div class="why-us__image-area">
+                    <div class="why-us__visual-element" aria-hidden="true"></div>
                 </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <span class="copy">© 2024 SILENT WEB STUDIO</span>
-                <div class="footer-socials">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
+                <div class="why-us__content">
+                    <h2 class="section-title">The Silent Advantage</h2>
+                    <ul class="why-us__list">
+                        <li class="why-us__item">
+                            <h4 class="why-us__item-title">Senior-Only Talent</h4>
+                            <p class="why-us__item-text">Your project is handled exclusively by senior engineers and designers. No juniors, no outsourcing.</p>
+                        </li>
+                        <li class="why-us__item">
+                            <h4 class="why-us__item-title">Performance First</h4>
+                            <p class="why-us__item-text">We build for speed. Our codebases are lightweight, semantic, and optimized for 100/100 scores.</p>
+                        </li>
+                        <li class="why-us__item">
+                            <h4 class="why-us__item-title">Bespoke Solutions</h4>
+                            <p class="why-us__item-text">No templates. No page builders. Every line of code is written specifically for your brand.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="main.js"></script>
-</body>
-</html>s
+    <!-- ================================================
+    OUR PROCESS
+    ================================================ -->
+
+    <section class="process" id="process">
+        <div class="container process__container">
+            <div class="section-header">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">A methodical approach to digital craftsmanship.</p>
+            </div>
+            <div class="process__steps">
+                <div class="process__step">
+                    <span class="process__number">01</span>
+                    <h3 class="process__step-title">Discover</h3>
+                    <p class="process__step-text">We dive deep into your brand, target audience, and business goals.</p>
+                </div>
+                <div class="process__step">
+                    <span class="process__number">02</span>
+                    <h3 class="process__step-title">Plan</h3>
+                    <p class="process__step-text">Defining the architecture, user flow, and technical specifications.</p>
+                </div>
+                <div class="process__step">
+                    <span class="process__number">03</span>
+                    <h3 class="process__step-title">Design</h3>
+                    <p class="process__step-text">Creating high-fidelity, interactive prototypes with a premium aesthetic.</p>
+                </div>
+                <div class="process__step">
+                    <span class="process__number">04</span>
+                    <h3 class="process__step-title">Develop</h3>
+                    <p class="process__step-text">Writing clean, scalable, and production-ready code.</p>
+                </div>
+                <div class="process__step">
+                    <span class="process__number">05</span>
+                    <h3 class="process__step-title">Launch</h3>
+                    <p class="process__step-text">Rigorous testing followed by a seamless deployment to production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    PORTFOLIO SECTION
+    ================================================ -->
+
+    <section class="portfolio" id="portfolio">
+        <div class="container portfolio__container">
+            <div class="section-header">
+                <h2 class="section-title">Selected Works</h2>
+                <p class="section-subtitle">Crafting the exceptional.</p>
+            </div>
+            <div class="portfolio__coming-soon">
+                <div class="portfolio__placeholder-card">
+                    <div class="portfolio__placeholder-visual"></div>
+                    <div class="portfolio__placeholder-content">
+                        <h3 class="portfolio__placeholder-title">Portfolio Coming Soon</h3>
+                        <p class="portfolio__placeholder-text">We are currently documenting our latest collaborations. High-end case studies are on their way.</p>
+                        <span class="portfolio__placeholder-tag">In Production</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    PRICING SECTION
+    ================================================ -->
+
+    <section class="pricing" id="pricing">
+        <div class="container pricing__container">
+            <div class="section-header">
+                <h2 class="section-title">Investment</h2>
+                <p class="section-subtitle">Tailored pricing for bespoke projects.</p>
+            </div>
+            <div class="pricing__grid">
+                <article class="pricing__card">
+                    <h3 class="pricing__tier">Starter</h3>
+                    <p class="pricing__note">Pricing available upon consultation.</p>
+                    <ul class="pricing__features">
+                        <li>Bespoke Design</li>
+                        <li>Single Page Application</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </article>
+                <article class="pricing__card pricing__card--featured">
+                    <h3 class="pricing__tier">Professional</h3>
+                    <p class="pricing__note">Pricing available upon consultation.</p>
+                    <ul class="pricing__features">
+                        <li>Full Multi-page Website</li>
+                        <li>CMS Integration</li>
+                        <li>Advanced Animations</li>
+                    </ul>
+                </article>
+                <article class="pricing__card">
+                    <h3 class="pricing__tier">Enterprise</h3>
+                    <p class="pricing__note">Pricing available upon consultation.</p>
+                    <ul class="pricing__features">
+                        <li>Custom Web Application</li>
+                        <li>E-Commerce Solutions</li>
+                        <li>Long-term Support</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    TESTIMONIALS SECTION
+    ================================================ -->
+
+    <section class="testimonials">
+        <div class="container testimonials__container">
+            <div class="section-header">
+                <h2 class="section-title">Client Feedback</h2>
+            </div>
+            <div class="testimonials__placeholder">
+                <p class="testimonials__placeholder-text">Client testimonials will appear here after successful collaborations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    TEAM SECTION
+    ================================================ -->
+
+    <section class="team">
+        <div class="container team__container">
+            <div class="section-header">
+                <h2 class="section-title">The Collective</h2>
+            </div>
+            <div class="team__placeholder">
+                <p class="team__placeholder-text">Our team profile is coming soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    FAQ SECTION
+    ================================================ -->
+
+    <section class="faq">
+        <div class="container faq__container">
+            <div class="section-header">
+                <h2 class="section-title">Common Inquiries</h2>
+            </div>
+            <div class="faq__list">
+                <details class="faq__item">
+                    <summary class="faq__question">What is your typical project timeline?</summary>
+                    <div class="faq__answer">
+                        <p>Timelines vary based on complexity, but most premium projects range from 6 to 12 weeks from discovery to launch.</p>
+                    </div>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Do you offer maintenance and support?</summary>
+                    <div class="faq__answer">
+                        <p>Yes, we provide long-term maintenance packages to ensure your digital product remains secure and high-performing.</p>
+                    </div>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Can you work with our existing design team?</summary>
+                    <div class="faq__answer">
+                        <p>Absolutely. We often collaborate as a technical partner, bringing existing designs to life with senior-level development.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    CONTACT SECTION
+    ================================================ -->
+
+    <section class="contact" id="contact">
+        <div class="container contact__container">
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <h2 class="section-title">Let's build <br>something <span class="text--italic">legendary.</span></h2>
+                    <p class="contact__text">Ready to elevate your digital presence? Reach out to start the conversation.</p>
+                    
+                    <div class="contact__details">
+                        <div class="contact__detail-item">
+                            <span class="contact__detail-label">Email</span>
+                       <a href="mailto:silentwebstudio@gmail.com" class="contact__detail-value">
+    silentwebstudio@gmail.com
+</a>
+                        </div>
+                        <div class="contact__detail-item">
+                            <span class="contact__detail-label">Office</span>
+                            <span class="contact__detail-value">Global — Remote First</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__map-placeholder">
+                        <!-- Interactive Map Integration Placeholder -->
+                    </div>
+                </div>
+
+                <div class="contact__form-wrapper">
+                    <form action="#" method="POST" class="contact__form" id="contact-form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form__input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form__input" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form__group">
+                            <label for="subject" class="form__label">Subject</label>
+                            <select id="subject" name="subject" class="form__input">
+                                <option value="new-project">New Project</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" name="message" class="form__textarea" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary form__submit">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+    NEWSLETTER SECTION
+    ================================================ -->
+
+    <section class="newsletter">
+        <div class="container newsletter__container">
+            <div class="newsletter__content">
+                <h2 class="newsletter__title">Stay in the Silent loop.</h2>
+                <p class="newsletter__description">Occasional insights on design, technology, and studio updates.</p>
+            </div>
+            <form class="newsletter__form">
+                <input type="email" class="newsletter__input" placeholder="Email Address" aria-label="Newsletter Email" required>
+                <button type="submit" class="btn btn--secondary newsletter__btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<!-- ================================================
+FOOTER
+================================================ -->
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <a href="/" class="footer__logo">SILENT</a>
+                <p class="footer__tagline">Architecting the digital future with precision and silence.</p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__nav-group">
+                    <h4 class="footer__nav-title">Sitemap</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#services" class="footer__link">Services</a></li>
+                        <li><a href="#portfolio" class="footer__link">Work</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h4 class="footer__nav-title">Services</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__link">UX/UI Design</a></li>
+                        <li><a href="#" class="footer__link">Development</a></li>
+                        <li><a href="#" class="footer__link">SEO</a></li>
+                        <li><a href="#" class="footer__link">E-Commerce</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h4 class="footer__nav-title">Social</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__link">LinkedIn</a></li>
+                        <li><a href="#" class="footer__link">Twitter</a></li>
+                        <li><a href="#" class="footer__link">Instagram</a></li>
+                        <li><a href="#" class="footer__link">Dribbble</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <div class="footer__legal">
+                <p class="footer__copyright">&copy; 2024 Silent Web Studio. All rights reserved.</p>
+                <div class="footer__legal-links">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                    <a href="#" class="footer__legal-link">Cookie Policy</a>
+                </div>
+            </div>
+            <button class="footer__back-to-top" id="back-to-top" aria-label="Back to top">
+                <span class="footer__back-to-top-icon"></span>
+            </button>
+        </div>
+    </div>
+</footer>
+
+<!-- ================================================
+EXTRA MODALS & POPUPS (HIDDEN BY DEFAULT)
+================================================ -->
+
+<div class="modal modal--search" id="search-modal" aria-hidden="true" role="dialog">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <form class="search-form">
+            <input type="search" class="search-input" placeholder="Search our studio..." aria-label="Search">
+        </form>
+        <button class="modal__close" aria-label="Close Modal">&times;</button>
+    </div>
+</div>
+
+<div class="cookie-banner" id="cookie-banner" role="status" aria-live="polite">
+    <div class="cookie-banner__content">
+        <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        <div class="cookie-banner__actions">
+            <button class="btn btn--secondary btn--sm" id="cookie-accept">Accept</button>
+            <a href="#" class="cookie-banner__link">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<div class="toast-container" id="toast-container" aria-live="assertive" aria-atomic="true">
+    <!-- Toast notifications will be dynamically inserted here -->
+</div>
+
+<div class="popup" id="success-popup" aria-hidden="true">
+    <div class="popup__content">
+        <h3>Thank You!</h3>
+        <p>Your message has been sent successfully. We'll be in touch soon.</p>
+        <button class="btn btn--primary popup__close">Close</button>
+    </div>
+</div>
+
+<div class="popup" id="newsletter-popup" aria-hidden="true">
+    <div class="popup__content">
+        <h3>Join the Studio</h3>
+        <p>Get exclusive insights into our process and latest releases.</p>
+        <form class="popup__form">
+            <input type="email" placeholder="Email" required>
+            <button type="submit" class="btn btn--primary">Join Now</button>
+        </form>
+        <button class="popup__close-icon" aria-label="Close">&times;</button>
+    </div>
+</div>
+
+<!-- Floating Actions -->
+<div class="floating-actions">
+  <a href="https://wa.me/923484038254" class="floating-btn floating-btn--whatsapp" aria-label="Contact on WhatsApp">
+        <!-- Icon placeholder -->
+    </a>
+    <button class="floating-btn floating-btn--contact" aria-label="Open Floating Contact">
+        <!-- Icon placeholder -->
+    </button>
+</div>
+
+<div class="live-chat-placeholder" id="live-chat" aria-hidden="true">
+    <!-- Live chat widget integration point -->
+</div>
+
+<!-- ================================================
+SCRIPTS
+================================================ -->
+<script src="assets/js/main.js" defer></script>
