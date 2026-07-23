@@ -664,3 +664,18 @@ footer {
 .hero-trust i{
     color:#2563EB;
 }
+
+/* Mobile Menu Fix */
+.mobile-menu-overlay {
+    display: none !important;
+}
+
+.mobile-menu-overlay.active {
+    display: flex !important;
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+}
