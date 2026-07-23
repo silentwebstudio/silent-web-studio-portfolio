@@ -645,3 +645,22 @@ footer {
     .mobile-nav-links li { margin-bottom: 2rem; }
     .mobile-nav-links a { font-size: 2rem; font-family: var(--font-heading); font-weight: 600; }
 }
+
+.hero-trust{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+    color:#B8B8B8;
+    font-size:15px;
+}
+
+.hero-trust span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.hero-trust i{
+    color:#2563EB;
+}
