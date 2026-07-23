@@ -1659,32 +1659,165 @@ body.light-theme{
     color:#0f172a;
 }
 
+/* Header */
 body.light-theme .header{
     background:rgba(255,255,255,.85);
     border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+body.light-theme .header__logo-text{
+    color:#0f172a;
 }
 
 body.light-theme .nav__link{
     color:#334155;
 }
 
-body.light-theme .section-title,
-body.light-theme .hero__title,
-body.light-theme .services__card-title{
+body.light-theme .theme-toggle,
+body.light-theme .hamburger{
     color:#0f172a;
 }
 
-body.light-theme .services__card,
-body.light-theme .pricing__card,
-body.light-theme .contact__form-wrapper{
-    background:#ffffff;
-    border-color:rgba(0,0,0,.08);
+/* Text */
+body.light-theme .section-title,
+body.light-theme .hero__title,
+body.light-theme .services__card-title,
+body.light-theme .pricing__tier,
+body.light-theme .faq__question{
+    color:#0f172a;
 }
 
 body.light-theme p,
 body.light-theme .hero__description,
-body.light-theme .services__card-description{
+body.light-theme .services__card-description,
+body.light-theme .footer__tagline{
     color:#475569;
+}
+
+/* Cards */
+body.light-theme .services__card,
+body.light-theme .pricing__card,
+body.light-theme .contact__form-wrapper,
+body.light-theme .faq__item,
+body.light-theme .contact__detail-item,
+body.light-theme .team__placeholder,
+body.light-theme .testimonials__placeholder{
+    background:#ffffff;
+    border-color:rgba(0,0,0,.08);
+}
+
+/* Inputs */
+body.light-theme .form__input,
+body.light-theme .form__textarea,
+body.light-theme .newsletter__input{
+    background:#ffffff;
+    color:#0f172a;
+    border-color:rgba(0,0,0,.12);
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder{
+    color:#64748b;
+}
+
+/* Newsletter + Footer */
+body.light-theme .newsletter,
+body.light-theme .footer{
+    background:#ffffff;
+    border-color:rgba(0,0,0,.08);
+}
+
+body.light-theme .newsletter__title,
+body.light-theme .footer__logo,
+body.light-theme .footer__nav-title{
+    color:#0f172a;
+}
+
+body.light-theme .footer__link{
+    color:#475569;
+}
+
+/* Secondary Button */
+body.light-theme .btn--secondary{
+    color:#0f172a;
+    border-color:rgba(0,0,0,.15);
+}
+
+body.light-theme .btn--secondary:hover{
+    background:#0f172a;
+    color:#fff;
+}
+
+body.light-theme .pricing__tier,
+body.light-theme .portfolio__placeholder-title,
+body.light-theme .why-us__item-title,
+body.light-theme .faq__question{
+    color:#0f172a;
+}
+
+body.light-theme .testimonials__placeholder-text,
+body.light-theme .team__placeholder-text,
+body.light-theme .why-us__item-text{
+    color:#475569;
+}
+
+/* ==========================
+   LIGHT THEME COMPLETE FIX
+========================== */
+
+body.light-theme .about,
+body.light-theme .why-us,
+body.light-theme .portfolio,
+body.light-theme .process,
+body.light-theme .testimonials,
+body.light-theme .faq{
+    background:#f8fafc;
+}
+
+body.light-theme .hero__floating-card,
+body.light-theme .portfolio__placeholder-card,
+body.light-theme .why-us__item,
+body.light-theme .process__step,
+body.light-theme .about__stat-item{
+    background:#ffffff;
+    border-color:rgba(0,0,0,.08);
+}
+
+body.light-theme .hero__floating-card-value,
+body.light-theme .portfolio__placeholder-title,
+body.light-theme .process__step-title,
+body.light-theme .why-us__item-title{
+    color:#0f172a;
+}
+
+body.light-theme .hero__floating-card-title,
+body.light-theme .portfolio__placeholder-text,
+body.light-theme .process__step-text{
+    color:#475569;
+}
+
+body.light-theme .hero__image,
+body.light-theme .about__image-wrapper{
+    border-color:rgba(0,0,0,.08);
+}
+
+body.light-theme .btn--primary{
+    color:#fff;
+}
+
+body.light-theme .preloader,
+body.light-theme .popup__content,
+body.light-theme .cookie-banner{
+    background:#ffffff;
+    color:#0f172a;
+}
+
+body.light-theme .preloader__percentage{
+    color:#475569;
+}
+
+body.light-theme .background-effects__gradient{
+    opacity:.15;
 }
 
 /* ==========================================
@@ -1701,4 +1834,29 @@ body.light-theme .services__card-description{
     opacity:1;
     transform:translateY(0);
 }
+
+/* ==========================================
+   MOBILE MENU ACTIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .nav--mobile{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#020617;
+        padding:25px;
+        border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav--mobile .nav__list{
+        flex-direction:column;
+        gap:20px;
+    }
+
+}
+
+
 
