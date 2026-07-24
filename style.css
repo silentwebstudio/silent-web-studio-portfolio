@@ -679,3 +679,14 @@ footer {
         display: none !important;
     }
 }
+
+@media (min-width: 769px) {
+    .trust-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item h3 {
+        font-size: 1.6rem;
+        white-space: normal;
+    }
+}
